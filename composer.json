@@ -1,7 +1,7 @@
 {
 	"name": "btb/pnp-php-sdk",
 	"type": "library",
-	"description": "The PHP implementation of the PNP API.",
+	"description": "The PHP implementation of the PNP API",
 	"keywords": [],
 	"license": "proprietary",
 	"minimum-stability": "dev",
