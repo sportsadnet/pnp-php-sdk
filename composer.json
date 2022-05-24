@@ -1,0 +1,31 @@
+{
+	"name": "btb/pnp-php-sdk",
+	"type": "library",
+	"description": "The PHP implementation of the PNP API.",
+	"keywords": [],
+	"license": "proprietary",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"require": {
+		"php": "^7.4 || ^8.0 || ^8.1",
+		"ext-json": "*",
+		"guzzlehttp/guzzle": "^7.0.1",
+		"illuminate/support": "^8.0 | ^9.0",
+		"nesbot/carbon": "^2.41.5"
+	},
+	"require-dev": {
+		"symfony/var-dumper": "*",
+		"psy/psysh": "*",
+		"phpunit/phpunit": "^9.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"Pnp\\Sdk\\": "src"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"Pnp\\Tests\\": "tests"
+		}
+	}
+}
