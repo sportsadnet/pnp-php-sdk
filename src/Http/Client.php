@@ -21,11 +21,12 @@ class Client implements ClientInterface
      *
      * @param  string  $baseUrl
      */
-    public function __construct(string $baseUrl)
+    public function __construct(string $baseUrl, $verify = false)
     {
         $this->client = new GuzzleClient([
             'base_uri' => $baseUrl,
             'timeout' => 30,
+            'verify' => $verify,
         ]);
     }
 
