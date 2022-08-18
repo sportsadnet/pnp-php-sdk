@@ -172,4 +172,12 @@ class ResourceBuilder extends Builder
     {
         return parent::with($relations);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function params(array $params = []): static
+    {
+        return parent::params($params);
+    }
 }
