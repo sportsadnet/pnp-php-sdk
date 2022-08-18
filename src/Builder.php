@@ -46,6 +46,11 @@ abstract class Builder
     protected array $with = [];
 
     /**
+     * @var array
+     */
+    protected array $params = [];
+
+    /**
      * Builder constructor.
      *
      * @param  Client  $client
@@ -118,6 +123,17 @@ abstract class Builder
     }
 
     /**
+     * @param array $params
+     * @return $this
+     */
+    protected function params(array $params = []): static
+    {
+        $this->params = array_merge($this->params, $params);
+
+        return $this;
+    }
+
+    /**
      * Cache the response if it isn't cached,
      * and use the cached one if it is.
      *
@@ -139,6 +155,10 @@ abstract class Builder
 
         if ($this->userToken !== null) {
             $request->setHeader("Authorization", "Bearer {$this->userToken}");
+        }
+
+        if (! empty($this->params)) {
+            $request->mergeQuery($this->params);
         }
 
         if (! empty($this->with)) {
