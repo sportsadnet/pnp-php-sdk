@@ -17,6 +17,7 @@ use Pnp\Sdk\Builders\LeagueCollectionBuilder;
 use Pnp\Sdk\Builders\LeagueResourceBuilder;
 use Pnp\Sdk\Builders\OddCollectionBuilder;
 use Pnp\Sdk\Builders\OddResourceBuilder;
+use Pnp\Sdk\Builders\OrderCollectionBuilder;
 use Pnp\Sdk\Builders\PackageCollectionBuilder;
 use Pnp\Sdk\Builders\PackageResourceBuilder;
 use Pnp\Sdk\Builders\PasswordResetCollectionBuilder;
@@ -208,6 +209,14 @@ trait HasRequests
     public function odd(string $id): OddResourceBuilder
     {
         return new OddResourceBuilder($this->getClient(), $id);
+    }
+
+    /**
+     * @return OrderCollectionBuilder
+     */
+    public function orders(): OrderCollectionBuilder
+    {
+        return  new OrderCollectionBuilder($this->getClient());
     }
 
     /**
