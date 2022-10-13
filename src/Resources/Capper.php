@@ -31,6 +31,8 @@ use Pnp\Sdk\Resource;
  * @property string $hotStreaks
  * @property string $hot_streaks
  *
+ * @property string|null $brag
+ *
  * @property DateTimeInterface $createdAt
  * @property DateTimeInterface $created_at
  *
@@ -54,6 +56,7 @@ class Capper extends Resource
             'image_url' => 'string',
             'info' => 'string',
             'hot_streaks' => 'string',
+            'brag' => 'string',
             'created_at' => 'datetime',
             'updated_at' => 'datetime',
         ];
