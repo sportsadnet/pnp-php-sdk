@@ -25,6 +25,8 @@ class Game extends Resource
     {
         return [
             'id' => 'int',
+            'date' => 'datetime',
+            'venue' => 'string',
         ];
     }
 }
