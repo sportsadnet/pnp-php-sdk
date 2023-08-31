@@ -6,6 +6,7 @@ namespace Pnp\Sdk;
 
 use Pnp\Sdk\Builders\AiGameCollectionBuilder;
 use Pnp\Sdk\Builders\AiGameResourceBuilder;
+use Pnp\Sdk\Builders\AiPpvTopResourceBuilder;
 use Pnp\Sdk\Builders\CapperCollectionBuilder;
 use Pnp\Sdk\Builders\CapperResourceBuilder;
 use Pnp\Sdk\Builders\CountryCollectionBuilder;
@@ -403,5 +404,13 @@ trait HasRequests
     public function aiGame(string $id): AiGameResourceBuilder
     {
         return new AiGameResourceBuilder($this->getClient(), $id);
+    }
+
+    /**
+     * /ai/games/{id}
+     */
+    public function aiPpvTop(string $id): AiPpvTopResourceBuilder
+    {
+        return new AiPpvTopResourceBuilder($this->getClient());
     }
 }
