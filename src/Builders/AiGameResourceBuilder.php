@@ -13,6 +13,6 @@ class AiGameResourceBuilder extends ResourceBuilder
      */
     public function __construct(Client $client, string $id)
     {
-        parent::__construct($client, '/ai/games', $id, AiGame::class);
+        parent::__construct($client, 'ai/games', $id, AiGame::class);
     }
 }

@@ -13,6 +13,6 @@ class AiGameCollectionBuilder extends CollectionBuilder
      */
     public function __construct(Client $client)
     {
-        parent::__construct($client, '/ai/games', AiGame::class);
+        parent::__construct($client, 'ai/games', AiGame::class);
     }
 }
