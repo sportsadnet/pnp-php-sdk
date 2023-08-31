@@ -15,6 +15,8 @@ use Pnp\Sdk\Resource;
  * @property DateTimeInterface $date
  * @property string $venue
  * @property array|null $predictions
+ * @property AiTeam $homeTeam
+ * @property AiTeam $awayTeam
  */
 class AiGame extends Resource
 {
@@ -39,6 +41,11 @@ class AiGame extends Resource
     }
 
     protected function castHomeTeam(array $value)
+    {
+        return new AiTeam($value);
+    }
+
+    protected function castAwayTeam(array $value)
     {
         return new AiTeam($value);
     }
