@@ -407,9 +407,9 @@ trait HasRequests
     }
 
     /**
-     * /ai/games/{id}
+     * /ai/ppv-top
      */
-    public function aiPpvTop(string $id): AiPpvTopResourceBuilder
+    public function aiPpvTop(): AiPpvTopResourceBuilder
     {
         return new AiPpvTopResourceBuilder($this->getClient());
     }
