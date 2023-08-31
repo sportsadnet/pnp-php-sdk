@@ -56,16 +56,6 @@ class UserResourceBuilder extends ResourceBuilder
         return new PickResourceBuilder($this, $id);
     }
 
-    public function aiGames(): \Pnp\Sdk\Builders\Users\Ai\GameCollectionBuilder
-    {
-        return new \Pnp\Sdk\Builders\Users\Ai\GameCollectionBuilder($this);
-    }
-
-    public function aiGame(string $id): \Pnp\Sdk\Builders\Users\Ai\GameResourceBuilder
-    {
-        return new \Pnp\Sdk\Builders\Users\Ai\GameResourceBuilder($this, $id);
-    }
-
     /**
      * /users/{id}/packages
      *
