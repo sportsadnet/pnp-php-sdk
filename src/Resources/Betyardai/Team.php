@@ -2,7 +2,7 @@
 
 /** @noinspection PhpUnused */
 
-namespace Pnp\Sdk\Resources;
+namespace Pnp\Sdk\Resources\Betyardai;
 
 use Pnp\Sdk\Resource;
 
@@ -16,7 +16,7 @@ use Pnp\Sdk\Resource;
  * @property array $team_stats
  * @property array $ppv_stats
  */
-class AiTeam extends Resource
+class Team extends Resource
 {
     /**
      * {@inheritDoc}

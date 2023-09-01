@@ -2,7 +2,7 @@
 
 /** @noinspection PhpUnused */
 
-namespace Pnp\Sdk\Resources;
+namespace Pnp\Sdk\Resources\Betyardai;
 
 use Pnp\Sdk\Resource;
 
@@ -13,7 +13,7 @@ use Pnp\Sdk\Resource;
  * @property array|null $unit_top
  * @property array|null $position_top
  */
-class AiPpvTop extends Resource
+class PpvTop extends Resource
 {
     /**
      * {@inheritDoc}

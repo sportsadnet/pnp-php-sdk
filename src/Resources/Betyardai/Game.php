@@ -2,7 +2,7 @@
 
 /** @noinspection PhpUnused */
 
-namespace Pnp\Sdk\Resources;
+namespace Pnp\Sdk\Resources\Betyardai;
 
 use DateTimeInterface;
 use Pnp\Sdk\Resource;
@@ -15,10 +15,10 @@ use Pnp\Sdk\Resource;
  * @property DateTimeInterface $date
  * @property string $venue
  * @property array|null $predictions
- * @property AiTeam $homeTeam
- * @property AiTeam $awayTeam
+ * @property Team $homeTeam
+ * @property Team $awayTeam
  */
-class AiGame extends Resource
+class Game extends Resource
 {
     /**
      * {@inheritDoc}
@@ -42,11 +42,11 @@ class AiGame extends Resource
 
     protected function castHomeTeam(array $value)
     {
-        return new AiTeam($value);
+        return new Team($value);
     }
 
     protected function castAwayTeam(array $value)
     {
-        return new AiTeam($value);
+        return new Team($value);
     }
 }
