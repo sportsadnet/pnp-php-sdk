@@ -20,7 +20,7 @@ class BetyardaiBuilder extends DataBuilder
      */
     public function games(): \Pnp\Sdk\Builders\Betyardai\GameCollectionBuilder
     {
-        return new \Pnp\Sdk\Builders\Betyardai\GameCollectionBuilder($this->getClient());
+        return new \Pnp\Sdk\Builders\Betyardai\GameCollectionBuilder($this);
     }
 
     /**
@@ -28,7 +28,7 @@ class BetyardaiBuilder extends DataBuilder
      */
     public function game(string $id): \Pnp\Sdk\Builders\Betyardai\GameResourceBuilder
     {
-        return new \Pnp\Sdk\Builders\Betyardai\GameResourceBuilder($this->getClient(), $id);
+        return new \Pnp\Sdk\Builders\Betyardai\GameResourceBuilder($this, $id);
     }
 
     /**
@@ -36,6 +36,6 @@ class BetyardaiBuilder extends DataBuilder
      */
     public function ppvTop(): \Pnp\Sdk\Builders\Betyardai\PpvTopResourceBuilder
     {
-        return new \Pnp\Sdk\Builders\Betyardai\PpvTopResourceBuilder($this->getClient());
+        return new \Pnp\Sdk\Builders\Betyardai\PpvTopResourceBuilder($this);
     }
 }
