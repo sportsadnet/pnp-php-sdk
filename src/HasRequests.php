@@ -4,6 +4,7 @@
 
 namespace Pnp\Sdk;
 
+use Pnp\Sdk\Builders\BetyardaiBuilder;
 use Pnp\Sdk\Builders\CapperCollectionBuilder;
 use Pnp\Sdk\Builders\CapperResourceBuilder;
 use Pnp\Sdk\Builders\CountryCollectionBuilder;
@@ -385,5 +386,11 @@ trait HasRequests
     public function state(string $id): StateResourceBuilder
     {
         return new StateResourceBuilder($this->getClient(), $id);
+    }
+
+
+    public function betyardai(): BetyardaiBuilder
+    {
+        return new BetyardaiBuilder($this->getClient());
     }
 }
