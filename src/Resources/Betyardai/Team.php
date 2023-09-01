@@ -27,9 +27,9 @@ class Team extends Resource
     {
         return [
             'id' => 'int',
-            'game_id' => 'int',
-            'short_name' => 'string',
-            'is_home' => 'bool',
+            'gameId' => 'int',
+            'shortName' => 'string',
+            'isHome' => 'bool',
         ];
     }
 
