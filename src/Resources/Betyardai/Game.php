@@ -35,6 +35,11 @@ class Game extends Resource
         ];
     }
 
+    protected function castProjections(array $value): array
+    {
+        return $value;
+    }
+
     protected function castPredictions(array $value): array
     {
         return $value;
